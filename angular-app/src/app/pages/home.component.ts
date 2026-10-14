@@ -1,4 +1,4 @@
-import { AsyncPipe, NgFor } from '@angular/common';
+import { AsyncPipe, NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { map } from 'rxjs';
@@ -6,7 +6,7 @@ import { NewsService } from '../news.service';
 
 @Component({
   standalone: true,
-  imports: [AsyncPipe, NgFor, RouterLink],
+  imports: [AsyncPipe, NgFor, NgIf, RouterLink],
   template: `
     <section class="hero">
       <div class="container hero-content">
