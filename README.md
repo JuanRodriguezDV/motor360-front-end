@@ -1,48 +1,58 @@
-# Motor 360 - Entrega previa 2 (Semana 5)
+# Motor 360 - Entrega final Front End
 
-Prototipo funcional de una plataforma web de noticias del sector motor, desarrollado para el módulo de Front End.
+Proyecto académico del módulo **Desarrollo de Front-end** del Politécnico Grancolombiano.
 
-## Tecnologías
-- HTML5
-- CSS3
-- JavaScript
+## Entrega final - Escenario 7 / Semana 7
+
+La versión final incorpora una aplicación Angular dentro de `angular-app/` y conserva la versión HTML/CSS/JavaScript de la Entrega 2 como evidencia de la evolución del proyecto.
+
+### Tecnologías
+- Angular 19
+- TypeScript
+- HTML5 y CSS3
 - JSON local
 - localStorage
+- Git y GitHub
+- GitHub Actions / GitHub Pages
 
-## Funcionalidades
-- Inicio con noticias destacadas.
+### Funcionalidades
+- Home con noticias destacadas.
 - Listado dinámico de noticias.
 - Búsqueda y filtros por categoría.
-- Vista de detalle.
-- Gestión de favoritos con localStorage.
+- Vista de detalle con rutas Angular.
+- Favoritos persistentes con localStorage.
 - Formulario de contacto con validaciones.
-- Mini CRUD para crear y eliminar noticias.
-- Diseño responsive inspirado en los mockups de la Entrega 1.
+- Mini CRUD local para crear y eliminar noticias.
+- Diseño responsive.
 
-## Páginas
-- `index.html`: inicio.
-- `noticias.html`: listado dinámico, búsqueda y filtros.
-- `detalle.html?id=1`: detalle de una noticia.
-- `favoritos.html`: noticias guardadas.
-- `contacto.html`: formulario de contacto.
-- `acerca.html`: información del proyecto.
-- `gestion.html`: gestión básica de noticias.
+### Fundamentos Angular evidenciados
+- Componentes standalone.
+- Angular Router.
+- Interpolación.
+- Property binding.
+- Event binding.
+- Two-way binding con `[(ngModel)]`.
+- Servicio compartido para datos y persistencia.
 
-## Ejecución local
-Se recomienda abrir la carpeta con Visual Studio Code y utilizar Live Server para permitir la lectura de `data/noticias.json` mediante `fetch`.
+## Repositorio
+https://github.com/JuanRodriguezDV/motor360-front-end
 
-## Estructura
-```text
-motor360-front-end/
-├── index.html
-├── noticias.html
-├── detalle.html
-├── favoritos.html
-├── contacto.html
-├── acerca.html
-├── gestion.html
-├── assets/images/
-├── css/styles.css
-├── data/noticias.json
-└── js/
+## Despliegue
+URL configurada para GitHub Pages:
+
+https://juanrodriguezdv.github.io/motor360-front-end/
+
+El flujo de despliegue está definido en `.github/workflows/deploy-angular-pages.yml`.
+
+## Ejecución local de Angular
+```bash
+cd angular-app
+npm install
+npm start
+```
+
+## Compilación
+```bash
+cd angular-app
+npm run build -- --base-href=/motor360-front-end/
 ```
